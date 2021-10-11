@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-function App() {
+import LandingPage from "./components/landing"
+import ForgetPage from "./components/forget";
+import ResetPage from "./components/reset";
+import createAccount from "./components/create"
+const AppContainer = () => {
+  
+  function renderPage(Component) {
+    return <Component />
+  
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+      
+      <Router>
+        <Switch>
+          <Route
+            exact
+            path = "/"
+            render ={() => renderPage(LandingPage)}
+          />
+          <Route 
+          exact path = "/forget" 
+          render = {()=>renderPage(ForgetPage)}
+         />
+         <Route 
+          exact path = "/reset" 
+          render = {()=>renderPage(ResetPage)}
+         />
+         <Route 
+          exact path = "/createAccount" 
+          render = {()=>renderPage(createAccount)}
+         />
+        </Switch>
+      </Router>
+   
   );
-}
+};
 
-export default App;
+export default AppContainer;

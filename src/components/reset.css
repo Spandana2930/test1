@@ -1,0 +1,15 @@
+.bg-container{
+    background-color:antiquewhite;
+    padding:50px;
+}
+.container{
+    text-align:center;
+    padding-top: 30px;
+     border-width:0px solid;
+     border-radius:10px;
+     background-color:thistle
+}
+.heading{
+   color:black;
+   font-size:25px;
+}

@@ -1,0 +1,23 @@
+.container{
+    border:"0px solid";
+    background-color:thistle;
+    height:50vh;
+    padding:50px;
+    text-align: center;
+    border-radius: 10px;
+}
+.bgContainer{
+    padding:30px;
+}
+.user{
+    margin-bottom:20px;
+}
+.btn{
+    margin-top:"10px";
+}
+.account{
+    color:"black";
+}
+.head{
+    margin-top:10px;
+}
